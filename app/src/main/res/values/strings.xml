@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MoneyTracker</string>
+    <string name="login_btn">Login</string>
+    <string name="sign_up_btn">Sign Up</string>
+</resources>
