@@ -53,7 +53,8 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Please confirm your password", Toast.LENGTH_SHORT).show();
                 } else if (!Vld_user_password.equals(Vld_re_enter_password)){
                     Toast.makeText(getApplicationContext(),"Password not match", Toast.LENGTH_SHORT).show();
-
+                }else {
+                    Toast.makeText(getApplicationContext(),"Submit Success!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
