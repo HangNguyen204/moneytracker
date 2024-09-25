@@ -46,6 +46,8 @@ public class LogIn extends AppCompatActivity {
                     Boolean checkUser = dataBaseHelper.checkEmailPassword(Valid_email, Valid_password);
                     if(checkUser == true){
                         Toast.makeText(getApplicationContext(),"Login Success!!", Toast.LENGTH_SHORT).show();
+                        Intent To_Home_Page = new Intent(LogIn.this, HomePage.class);
+                        startActivity(To_Home_Page);
                     }else {
                         Toast.makeText(getApplicationContext(),"Login Fail!!", Toast.LENGTH_SHORT).show();
                     }
