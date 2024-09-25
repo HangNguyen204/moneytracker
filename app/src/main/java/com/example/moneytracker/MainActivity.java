@@ -28,5 +28,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(To_Sign_Up);
             }
         });
+        Login_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent To_Log_In = new  Intent(MainActivity.this , LogIn.class);
+                startActivity(To_Log_In);
+            }
+        });
     }
 }

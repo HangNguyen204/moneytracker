@@ -22,7 +22,7 @@ import java.io.FileOutputStream;
 import java.io.StringReader;
 
 public class SignUp extends AppCompatActivity {
-    DataBaseManager dbManager;
+    DataBaseHelper dataBaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +34,7 @@ public class SignUp extends AppCompatActivity {
         EditText Re_enterPassword = findViewById(R.id.re_enter_pass_text_edit);
         Button Back_btn = findViewById(R.id.Back_btn);
         Button Submit_btn = findViewById(R.id.Submit_btn);
-
-        dbManager = new DataBaseManager(this);
-        try {
-            dbManager.open();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        dataBaseHelper = new DataBaseHelper(this);
 
         Back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +50,7 @@ public class SignUp extends AppCompatActivity {
                 String Vld_user_email = User_Email.getText().toString();
                 String Vld_user_password = Password.getText().toString();
                 String Vld_re_enter_password = Re_enterPassword.getText().toString();
+
                 if (Vld_user_name.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Name is blank", Toast.LENGTH_SHORT).show();
                 } else if (Vld_user_email.isEmpty()){
@@ -66,24 +61,22 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Please confirm your password", Toast.LENGTH_SHORT).show();
                 } else if (!Vld_user_password.equals(Vld_re_enter_password)){
                     Toast.makeText(getApplicationContext(),"Password not match", Toast.LENGTH_SHORT).show();
-                }else {
-                    dbManager.insert(Vld_user_email, Vld_user_password);
-                    fetchdb();
-                    Toast.makeText(getApplicationContext(),"Submit Success!!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Boolean checkEmail = dataBaseHelper.checkEmail(Vld_user_email);
+                    if(checkEmail == false){
+                        Boolean insert = dataBaseHelper.insert(Vld_user_email, Vld_user_password);
+
+                        if(insert == true){
+                            Toast.makeText(getApplicationContext(),"Submit Success!!", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(getApplicationContext(),"Submit Fail!!", Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(),"Email already exists, please log in!!", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
-    }
-    public void fetchdb(){
-        Cursor cursor = dbManager.fetch();
-        if (cursor.moveToFirst()){
-            do {
-                @SuppressLint("Range") String ID = cursor.getString(cursor.getColumnIndex(DataBaseHelper.User_id));
-                @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex(DataBaseHelper.User_email));
-                @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex(DataBaseHelper.User_password));
-                Log.i("DATABASE_TAG", "I have read ID: " + ID + " Email: " + username + " Password: " + password);
-
-            }while (cursor.moveToNext());
-        }
     }
 }
