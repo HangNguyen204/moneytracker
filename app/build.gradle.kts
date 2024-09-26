@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
+
 }
 
 android {
     namespace = "com.example.moneytracker"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.moneytracker"
@@ -14,6 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -36,7 +39,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
