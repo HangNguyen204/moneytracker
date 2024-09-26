@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="backgroundcolor">#F5F6F5</color>
-    <color name="button_color">#38AF79</color>
-    <color name="grey">#BCBCBC</color>
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="backgroundcolor">#F5F6F5</color>
+        <color name="button_color">#38AF79</color>
+        <color name="grey">#BCBCBC</color>
+
+        <color name="purple_200">#2196F3</color>
+        <color name="purple_500">#47C3F4</color>
+        <color name="purple_450">#E2EFF5</color>
+        <color name="purple_700">#FF03DAC5</color>
+        <color name="teal_200">#FF03DAC5</color>
+        <color name="teal_700">#FF018786</color>
+
+        <color name="red">#FF2525</color>
+        <color name="backgroundInput">#ECEEF0</color>
+        <color name="colorBackground">#ffffff</color>
+
+        <color name="colorSupportText">#8D8F97</color>
+        <color name="colorTransparentWhite">#cccccc</color>
+        <color name="backgroundWhite">#FFFFFFFF</color>
+        <color name="transparent">#00000000</color>
+        <color name="colorWarning">#fb3</color>
+        <color name="colorBlue">#33b5e5</color>
+        <color name="backgroundBlack">#FF000000</color>
+        <color name="backgroundIcon">#F9FAFB</color>
+        <color name="backgroundStroke">#E5E7EB</color>
+
+        <color name="colorButtomNavigationMenuPressed">#1D3A70</color>
+
+
 </resources>

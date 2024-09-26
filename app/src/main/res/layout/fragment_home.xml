@@ -5,12 +5,137 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_balance"
         android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:text="Home"
+        android:layout_height="wrap_content"
+        android:text="Số dư:     0 VNĐ"
         android:textSize="30sp"
-        android:layout_gravity="center"/>
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
 
+
+
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btn_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="100dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" Quan ly "
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/transaction_income"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Giao dịch Thu nhập"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="280dp"/>
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="170dp"
+        android:src="@drawable/category"
+
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="280dp"
+        android:text="Danh mục" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/transaction_expense"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="290dp"
+
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="280dp"
+        android:text="Giao dịch Chi tiêu" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/budget"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="50dp"
+
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Ngân sách"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="390dp"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/goal"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="170dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="390dp"
+        android:text="Mục tiêu" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/statistical"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="290dp"
+        android:tint="@color/purple_700"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="?attr/selectableItemBackground"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="390dp"
+        android:text="Thống kê" />
 </FrameLayout>

@@ -8,6 +8,7 @@ android {
     compileSdk = 34
 
 
+
     defaultConfig {
         applicationId = "com.example.moneytracker"
         minSdk = 26
