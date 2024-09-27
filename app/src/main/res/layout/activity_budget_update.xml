@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".budget.BudgetUpdate">
+
+    <LinearLayout
+        android:id="@+id/titleAndBack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/home_title_background"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/cardCreationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btnBackBudgetUpdate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:id="@+id/cardCreationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Sửa ngân sách"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:textSize="22sp"
+                android:textColor="#1606FB"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edtBudgetAmountUpdate"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/transaction_amount"
+                android:hint="Số tiền ngân sách"
+                android:inputType="number"
+                android:padding="16dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <EditText
+                android:id="@+id/edtBudgetDescriptionUpdate"
+                style="@style/custom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/description"
+                android:hint="Mô tả"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/btnBudgetUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sửa" />
+            <Button
+                android:id="@+id/btnDeleteBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/red"
+                android:text="Xóa" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

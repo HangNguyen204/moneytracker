@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category.CategoryActivity">
+
+    <LinearLayout
+        android:id="@+id/titleAndBack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/home_title_background"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_weight="0.01"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/topTitle"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.98"
+                android:gravity="center"
+                android:text="Danh Muc "
+                android:textColor="#1606FB"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/btnCategoryCreate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.01"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/add" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_margin="10dp"
+        android:id="@+id/searchView"
+        app:queryBackground="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_input"
+        app:queryHint="Search here..."
+        app:iconifiedByDefault="false"/>
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textSize="15sp"
+        android:text="Chọn để xem chi tiết hoặc chỉnh sửa"
+        android:gravity="center"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

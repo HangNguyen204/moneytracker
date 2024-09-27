@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="custom_input">
+        <item name="android:background">@drawable/custom_input</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">247dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/purple_450</item>
+        <item name="android:textColor">@drawable/back_btn_background</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="transaction_information_text_view_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">5sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="transaction_information_text_view_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">20sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/purple_200</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
