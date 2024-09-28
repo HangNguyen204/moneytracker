@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" >
     <style name="custom_input">
         <item name="android:background">@drawable/custom_input</item>
         <item name="android:drawablePadding">20dp</item>
@@ -19,7 +19,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="transaction_information_text_view_content">
+    <style name="transaction_information_text_view_content" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>

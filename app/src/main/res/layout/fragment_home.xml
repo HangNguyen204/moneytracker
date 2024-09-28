@@ -43,14 +43,16 @@
         android:textAlignment="center"
         android:textSize="30dp"
         android:textStyle="bold"/>
+
     <ImageView
+        android:id="@+id/Income_view"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="240dp"
         android:layout_marginStart="40dp"
-        android:src="@drawable/transaction_income"
+        android:layout_marginTop="240dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:foreground="?attr/selectableItemBackground"/>
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/transaction_income" />
 
     <TextView
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.example.moneytracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,22 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
-import androidx.annotation.NonNull;
+
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.text.InputType;
-import android.widget.EditText;
+import android.widget.Toast;
 
 ;
+
 public class HomeFragment extends Fragment {
 
+    public HomeFragment(){
+
+    }
     private TextView tvBalance;
     private Button btnAdd, btnSubtract;
     private int balance = 0;
-
+    private ImageView income_img;
     @Nullable
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,10 +42,17 @@ public class HomeFragment extends Fragment {
         tvBalance = view.findViewById(R.id.tv_balance);
         btnAdd = view.findViewById(R.id.btn_add);
         btnSubtract = view.findViewById(R.id.btn_subtract);
+        income_img = view.findViewById(R.id.Income_view);
 
         // Hiển thị số dư ban đầu
         updateBalanceText();
-
+        income_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireActivity(),IncomeCreate.class);
+                startActivity(i);
+            }
+        });
         btnAdd.setOnClickListener(v -> showAmountDialog(true));
         btnSubtract.setOnClickListener(v -> showAmountDialog(false));
 
@@ -75,4 +87,5 @@ public class HomeFragment extends Fragment {
     private void updateBalanceText() {
         tvBalance.setText("Số dư: " + balance + " VNĐ");
     }
+
 }
