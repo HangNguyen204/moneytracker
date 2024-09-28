@@ -28,12 +28,11 @@ public class HomeFragment extends Fragment {
     private TextView tvBalance;
     private Button btnAdd, btnSubtract;
     private int balance = 0;
-    private ImageView income_img;
+    private ImageView income_img, category_img;
     @Nullable
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -43,13 +42,20 @@ public class HomeFragment extends Fragment {
         btnAdd = view.findViewById(R.id.btn_add);
         btnSubtract = view.findViewById(R.id.btn_subtract);
         income_img = view.findViewById(R.id.Income_view);
-
+        category_img = view.findViewById(R.id.danhmuc_imgview);
         // Hiển thị số dư ban đầu
         updateBalanceText();
         income_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(requireActivity(),IncomeCreate.class);
+                startActivity(i);
+            }
+        });
+        category_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireActivity(), CategoryActivity.class);
                 startActivity(i);
             }
         });

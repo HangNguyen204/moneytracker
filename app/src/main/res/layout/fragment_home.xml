@@ -63,6 +63,7 @@
 
 
     <ImageView
+        android:id="@+id/danhmuc_imgview"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="240dp"
@@ -74,17 +75,17 @@
 
     <TextView
         android:layout_width="86dp"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:layout_marginStart="160dp"
         android:layout_marginTop="280dp"
         android:text="Danh mục" />
     <ImageView
+
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/transaction_expense"
         android:layout_marginTop="240dp"
         android:layout_marginStart="290dp"
-
         android:background="?attr/selectableItemBackgroundBorderless"
         android:foreground="?attr/selectableItemBackground"/>
 
